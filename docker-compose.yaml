@@ -1,0 +1,26 @@
+
+version: '3'
+services:
+  api-server:
+    build:
+      context: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo
+    networks:
+      - grazzy-net
+  mongo:
+    image: mongo:3.6.19-xenial
+    ports:
+      - "27017:27017"
+    networks:
+      - grazzy-net
+    volumes:
+      - mongo-data:/data/db
+networks:
+  grazzy-net:
+    driver: bridge
+volumes:
+  mongo-data:
+    driver: local

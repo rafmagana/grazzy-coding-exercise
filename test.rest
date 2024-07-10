@@ -1,0 +1,37 @@
+###
+GET http://localhost:3000/
+
+###
+GET http://localhost:3000/healthcheck
+
+###
+POST http://localhost:3000/is-same-calendar-day
+Content-Type: application/json
+Authorization: da39a3ee5e6b4b0d3255bfef95601890afd80709
+
+{
+    "firstTimestamp": "July 2, 2024 03:00:00 UTC",
+    "secondTimestamp": "July 1, 2024 17:00:00 UTC",
+    "timezone": "America/Chicago"
+}
+
+###
+POST http://localhost:3000/is-same-calendar-day
+Content-Type: application/json
+Authorization: da39a3ee5e6b4b0d3255bfef95601890afd80709
+
+{
+    "firstTimestamp": "July 3, 2024 03:00:00 UTC",
+    "secondTimestamp": "July 1, 2024 17:00:00 UTC",
+    "timezone": "America/Chicago"
+}
+
+###
+ GET http://localhost:3000/sunset-data
+ Authorization: da39a3ee5e6b4b0d3255bfef95601890afd80709
+
+###
+GET https://api.sunrise-sunset.org/json?lat=36.7201600&lng=-4.4203400&date=2024-07-01&tzid=America/Mexico_City
+
+###
+GET https://api.sunrise-sunset.org/json?lat=36.7201600&date=2024-07-01&tzid=America/Mexico_City

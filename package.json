@@ -1,0 +1,49 @@
+{
+  "name": "grazzy-coding-exercise",
+  "version": "1.0.0",
+  "description": "An API to know if two dates occur in the same calendar day within a time zone.",
+  "main": "index.js",
+  "type": "module",
+  "module": "module",
+  "scripts": {
+    "build": "rimraf dist && npx tsc",
+    "prestart": "npm run build",
+    "start": "node dist/index.js",
+    "predev": "npm run build",
+    "dev": "npx tsc -w & nodemon dist/index.js",
+    "test": "NODE_ENV=test mocha -r  tsconfig-paths/register -r ts-node/register 'src/**/__test__/*.test.ts'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.24.7",
+    "@babel/preset-env": "^7.24.7",
+    "@babel/preset-typescript": "^7.24.7",
+    "@types/chai": "^4.3.16",
+    "@types/cors": "^2.8.17",
+    "@types/dotenv": "^8.2.0",
+    "@types/mocha": "^10.0.7",
+    "@types/mongodb": "^4.0.7",
+    "@types/node": "^20.14.10",
+    "@types/sinon": "^17.0.3",
+    "@types/supertest": "^6.0.2",
+    "chai": "^5.1.1",
+    "mocha": "^10.6.0",
+    "nodemon": "^3.1.4",
+    "sinon": "^18.0.0",
+    "supertest": "^7.0.0",
+    "ts-node": "^10.9.2",
+    "ts-sinon": "^2.0.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "@types/express": "^4.17.21",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "moment-timezone": "^0.5.45",
+    "mongodb": "^6.8.0",
+    "rimraf": "^6.0.0"
+  }
+}
