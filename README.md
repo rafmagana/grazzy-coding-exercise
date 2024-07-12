@@ -48,7 +48,7 @@ You'll need to send requests with an `AUTHORIZATION` header and the value must b
 * * * `firstTimestamp`
 * * * `secondTimestamp`
 * * * `timezone`
-* `GET /sunset-data` (returns the stored sunset data. We store these values only of calls to `POST /is-same-calendar-day` returns `200`)
+* `GET /sunset-data` (returns the stored sunset data. We store these values only if calls to `POST /is-same-calendar-day` returns `200`)
 
 ## Testing
 
